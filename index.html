@@ -560,7 +560,7 @@
                 first meal is on us!
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" name="sign-up" netlify>
                 <!-- <div> for displaying as block element -->
                 <div>
                   <!-- Label and input: inline element by default -->
@@ -569,6 +569,7 @@
                     id="full-name"
                     type="text"
                     placeholder="Rohit Chaudhry"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -578,12 +579,13 @@
                     id="email"
                     type="email"
                     placeholder="me@example.com"
+                    name="email"
                     required
                   />
                 </div>
                 <div>
                   <label for="select-where">Where did you hear from us?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">Please choose one option:</option>
                     <option value="friends">Friends and family</option>
                     <option value="youtube">Youtube Video</option>
