@@ -118,10 +118,13 @@ instaed, 1rem = 1em = 16px*/
 
     .btn-mobile-nav {
       display: block;
+      z-index: 1000;
     }
 
     .main-nav {
-      background-color: rgba(255, 255, 255, 0.97);
+      background-color: rgba(255, 255, 255, 0.9);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(10px);
       position: absolute;
       top: 0;
       left: 0;
@@ -235,7 +238,7 @@ instaed, 1rem = 1em = 16px*/
       padding: 2.4rem 1.6rem;
     }
 
-    .section-hero{
+    .section-hero {
       padding: 2.4rem 0 6.4rem 0;
     }
 
@@ -243,45 +246,97 @@ instaed, 1rem = 1em = 16px*/
       padding: 0 3.2rem;
     }
 
-    .hero-img{
+    .hero-img {
       width: 80%;
     }
 
-    .logos img{
+    .logos img {
       height: 1.2rem;
     }
 
-    .step-image-box:nth-child(2){
+    .step-image-box:nth-child(2) {
       grid-row: 1;
     }
 
-    .step-image-box:nth-child(6){
+    .step-image-box:nth-child(6) {
       grid-row: 5;
     }
 
-    .step-image-box{
+    .step-image-box {
       transform: translateY(2.4rem);
     }
 
-    .testimonials{
+    .testimonials {
       grid-template-columns: 1fr;
     }
 
-    .gallery{
+    .gallery {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.2rem;
     }
 
-    .cta{
+    .cta {
       grid-template-columns: 1fr;
     }
 
-    .cta-img-box{
+    .cta-img-box {
       height: 32rem;
       grid-row: 1;
     }
 
-    .cta-text-box{
+    .cta-text-box {
       padding: 3.2rem;
     }
+  }
+}
+
+/* Fixing Safari Flexbox Gap */
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
 }
